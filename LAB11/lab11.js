@@ -16,4 +16,3 @@ auto.start()
 console.log(auto.isStarted)
 auto.stop()
 console.log(auto.isStarted)
-
