@@ -6,7 +6,7 @@ function gradeLevelDisplay(argue) {
     else if (argue <= 49)
         alert("Тест не сдан! Балл слишком низок...") 
     else if (argue <= 69)
-        alert("Тест сдан! Балл удовлитворительный...")
+        alert("Тест сдан! Балл удовлетворительный...")
     else if (argue <= 89)
         alert("Тест сдан! Балл хороший...")
     else if (argue <= 100)
@@ -15,7 +15,10 @@ function gradeLevelDisplay(argue) {
 }
 
 while(true) { // мне надоело по сто раз перезапускать html файл
-    if (!(gradeLevelDisplay(parseInt(prompt("Введите свой балл: "), 10))))
+    let user_input = prompt("Введите свой балл: ")
+    if (user_input === null)
+        break
+    if (!(gradeLevelDisplay(parseInt(user_input, 10))))
         break
 }
 close()
